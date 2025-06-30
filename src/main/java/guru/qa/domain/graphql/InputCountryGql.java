@@ -1,6 +1,6 @@
 package guru.qa.domain.graphql;
 
-public record CountryInputGql(
+public record InputCountryGql(
         String countryName,
         String countryCode
 ) {

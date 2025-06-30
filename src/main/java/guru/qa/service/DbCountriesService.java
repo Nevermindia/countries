@@ -4,7 +4,7 @@ import guru.qa.data.CountryEntity;
 import guru.qa.data.CountryRepository;
 import guru.qa.domain.Country;
 import guru.qa.domain.graphql.CountryGql;
-import guru.qa.domain.graphql.CountryInputGql;
+import guru.qa.domain.graphql.InputCountryGql;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ResponseStatusException;
@@ -47,7 +47,7 @@ public class DbCountriesService implements CountriesService {
     }
 
     @Override
-    public CountryGql addGqlCountry(CountryInputGql input) {
+    public CountryGql addGqlCountry(InputCountryGql input) {
         CountryEntity ce = new CountryEntity();
         ce.setCountryCode(input.countryCode());
         ce.setCountryName(input.countryName());
